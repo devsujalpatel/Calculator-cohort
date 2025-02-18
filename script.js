@@ -1,4 +1,3 @@
-const calculator = document.querySelector(".container")
 const input = document.querySelector("#input") 
 
 let currentDisplay = "0";
