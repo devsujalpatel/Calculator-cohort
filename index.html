@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+    <div class="container">
+        <div class="first-row">
+            <input type="text" id="input" disabled>
+        </div>
+        <div class="second-row rows">
+            <div class="clear-btn" data-action="clear" onclick="clearDisplay()">CA</div>
+            <div class="delete-btn" onclick="deleteOne()" data-action="delete"><i class="ri-delete-back-2-line"></i></div>
+            <div  class="mod-btn" data-action="mod" onclick="appendToDisplay('%')">%</div>
+            <div data-action="divide" onclick="appendToDisplay('/')">/</div>
+        </div>
+        <div class="third-row rows">
+            <div onclick="appendToDisplay('9')">9</div>
+            <div onclick="appendToDisplay('8')">8</div>
+            <div onclick="appendToDisplay('7')">7</div>
+            <div  data-action="multiply" onclick="appendToDisplay('*')">*</div>
+        </div>
+        <div class="fourth-row rows">
+            <div onclick="appendToDisplay('6')">6</div>
+            <div onclick="appendToDisplay('5')">5</div>
+            <div onclick="appendToDisplay('4')">4</div>
+            <div data-action="add" onclick="appendToDisplay('+')">+</div>
+        </div>
+        <div class="fifth-row rows">
+            <div onclick="appendToDisplay('3')">3</div>
+            <div onclick="appendToDisplay('2')">2</div>
+            <div onclick="appendToDisplay('1')">1</div>
+            <div data-action="subtract">-</div>
+        </div>
+        <div class="last-row rows">
+            <div data-action="decimal">.</div>
+            <div>0</div>
+            <div class="equal-to" data-action="calculate" onclick="calculateResult()">=</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
